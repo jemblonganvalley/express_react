@@ -3,7 +3,7 @@ const index = express.Router()
 const fs = require('fs')
 const path = require('path')
 
-const dt = (title, meta)=>{
+const dt = (title, meta, image)=>{
     let ck = fs.readFileSync('./public/client/build/index.html', 'utf8')
     return ck.replace('<title>React App</title>' , `
     <title>${title}</title>
